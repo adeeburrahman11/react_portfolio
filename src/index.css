@@ -9,3 +9,9 @@ html {
 body {
   @apply bg-baby-blue text-a-black;
 }
+
+/* COMPONENTS */
+
+.menu-btn {
+  @apply w-10 h-10 grid place-items-center bg-a-black/10 rounded-xl ring-inset ring-1 ring-a-black/[0.02] backdrop-blur-2xl hover:bg-a-black/15 transition-[transform,background-color] active:scale-95;
+}
