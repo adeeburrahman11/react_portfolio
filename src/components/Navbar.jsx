@@ -1,15 +1,24 @@
-import React, { useRef, useEffect } from "react";
+import React, {
+  useRef,
+  useEffect,
+  forwardRef,
+  useImperativeHandle,
+} from "react";
 import PropTypes from "prop-types";
 
-const Navbar = ({ navOpen }) => {
+const Navbar = forwardRef(({ navOpen }, ref) => {
   const lastActiveLink = useRef();
   const activeBox = useRef();
+  const contactLinkRef = useRef();
 
   const initActiveBox = () => {
-    activeBox.current.style.top = lastActiveLink.current.offsetTop + "px";
-    activeBox.current.style.left = lastActiveLink.current.offsetLeft + "px";
-    activeBox.current.style.width = lastActiveLink.current.offsetWidth + "px";
-    activeBox.current.style.height = lastActiveLink.current.offsetHeight + "px";
+    if (lastActiveLink.current) {
+      activeBox.current.style.top = lastActiveLink.current.offsetTop + "px";
+      activeBox.current.style.left = lastActiveLink.current.offsetLeft + "px";
+      activeBox.current.style.width = lastActiveLink.current.offsetWidth + "px";
+      activeBox.current.style.height =
+        lastActiveLink.current.offsetHeight + "px";
+    }
   };
 
   useEffect(initActiveBox, []);
@@ -25,6 +34,20 @@ const Navbar = ({ navOpen }) => {
     activeBox.current.style.height = event.target.offsetHeight + "px";
   };
 
+  useImperativeHandle(ref, () => ({
+    // removeActiveBox: () => {
+    //   lastActiveLink.current?.classList.remove("active");
+    //   activeBox.current.style.width = "0";
+    //   activeBox.current.style.height = "0";
+    // },
+    setActiveLink: (link) => {
+      const targetLink = navItems.find((item) => item.link === link);
+      if (targetLink && targetLink.ref.current) {
+        activeCurrentLink({ target: targetLink.ref.current });
+      }
+    },
+  }));
+
   const navItems = [
     {
       label: "Home",
@@ -36,21 +59,25 @@ const Navbar = ({ navOpen }) => {
       label: "About",
       link: "#about",
       className: "nav-link",
+      ref: useRef(),
     },
     {
       label: "Projects",
       link: "#projects",
       className: "nav-link",
+      ref: useRef(),
     },
     {
       label: "Experience",
       link: "#experience",
       className: "nav-link",
+      ref: useRef(),
     },
     {
       label: "Contact",
       link: "#contact",
       className: "nav-link md:hidden",
+      ref: useRef(),
     },
   ];
 
@@ -70,7 +97,7 @@ const Navbar = ({ navOpen }) => {
       <div className="active-box" ref={activeBox}></div>
     </nav>
   );
-};
+});
 
 Navbar.propTypes = {
   navOpen: PropTypes.bool.isRequired,

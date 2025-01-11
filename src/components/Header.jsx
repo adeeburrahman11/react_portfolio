@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import Navbar from "./Navbar";
-import { useState } from "react";
 
 const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
+  const navBarRef = useRef();
+  const handleContactClick = () => {
+    // navBarRef.current?.removeActiveBox();
+    navBarRef.current?.setActiveLink("#contact");
+  };
 
   return (
     <header className="fixed top-0 left-0 w-full h-20 flex items-center z-40 bg-gradient-to-b from-baby-blue to-baby-blue/0">
@@ -27,11 +31,12 @@ const Header = () => {
               {navOpen ? "close" : "menu"}
             </span>
           </button>
-          <Navbar navOpen={navOpen} />
+          <Navbar navOpen={navOpen} ref={navBarRef} />
         </div>
         <a
           href="#contact"
           className="btn btn-secondary max-md:hidden md:justify-self-end"
+          onClick={handleContactClick}
         >
           Contact Me
         </a>
