@@ -32,7 +32,7 @@ const Hero = () => {
         <div className="hidden lg:block">
           <figure className="w-full max-w-[440px] ml-auto bg-gradient-to-t from-a-yellow via-25% via-a-yellow/40 to-65% rounded-[60px] overflow-hidden">
             <img
-              src="/images/background3.png"
+              src="/images/hero-banner.png"
               width={656}
               height={800}
               alt="Adeebur Rahman"
