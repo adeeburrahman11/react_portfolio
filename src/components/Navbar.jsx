@@ -9,7 +9,7 @@ import PropTypes from "prop-types";
 const Navbar = forwardRef(({ navOpen }, ref) => {
   const lastActiveLink = useRef();
   const activeBox = useRef();
-  const contactLinkRef = useRef();
+  // const contactLinkRef = useRef();
 
   const initActiveBox = () => {
     if (lastActiveLink.current) {

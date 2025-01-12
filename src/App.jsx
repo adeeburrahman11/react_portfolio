@@ -5,7 +5,9 @@ const App = () => {
   return (
     <>
       <Header />
-      <main>{/* <Hero /> */}</main>
+      <main>
+        <Hero />
+      </main>
     </>
   );
 };

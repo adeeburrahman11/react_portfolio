@@ -10,13 +10,13 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full h-20 flex items-center z-40 bg-gradient-to-b from-baby-blue to-baby-blue/0">
-      <div className="max-w-screen-2xl w-full mx-auto px-4 flex justify-between items-center md:px-6 md-grid md:grid-cols-[1fr,3fr,1fr]">
+    <header className="fixed top-0 left-0 w-full h-32 flex items-center z-40 bg-gradient-to-b from-baby-blue to-baby-blue/0">
+      <div className="max-w-screen-xl w-full mx-auto px-4 flex justify-between items-center md:px-6 md-grid md:grid-cols-[1fr,3fr,1fr]">
         <h1>
           <a href="/" className="logo">
             <img
-              width={80}
-              height={80}
+              width={70}
+              height={70}
               src="/images/logo.png"
               alt="Adeebur Rahman"
             />
