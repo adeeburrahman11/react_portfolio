@@ -74,3 +74,19 @@ body {
 .btn-secondary {
   @apply bg-a-black text-baby-blue active:bg-a-black/80;
 }
+
+.btn .material-symbols-rounded {
+  @apply text-[18px];
+}
+
+.btn:has(.material-symbols-rounded) {
+  @apply pr-3;
+}
+
+.btn-primary {
+  @apply h-11 bg-a-yellow text-a-black hover:bg-a-yellow/65 active:bg-a-yellow;
+}
+
+.btn-outline {
+  @apply h-11 bg-slate-200 hover:bg-slate-300 active:bg-slate-200;
+}
