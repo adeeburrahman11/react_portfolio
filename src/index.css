@@ -19,7 +19,7 @@ body {
 }
 
 .headline-1 {
-  @apply text-5xl leading-tight font-semibold lg:text-[55px] lg:leading-[1.15];
+  @apply text-[44px] leading-tight font-semibold lg:text-[50px] lg:leading-[1.15];
 }
 
 /* utilities */
@@ -41,6 +41,10 @@ body {
   @apply w-full h-full object-cover;
 }
 
+.section {
+  @apply pt-20 lg:pt-32;
+}
+
 /* COMPONENTS */
 
 .menu-btn {
@@ -48,7 +52,7 @@ body {
 }
 
 .navbar {
-  @apply absolute top-full mt-2 right-0 min-w-40 p-2 bg-a-black/10 rounded-2xl ring-inset ring-1 ring-a-black/5 scale-90 isolate blur-sm opacity-0 invisible transition-[opacity,transform,filter] md:static md:flex md:items-center md:mt-0 md:opacity-100 md:blur-0 md:visible md:scale-100 backdrop-blur-2xl;
+  @apply absolute top-full mt-2 right-0 min-w-40 p-2 bg-a-black/10 rounded-2xl ring-inset ring-1 ring-a-black/5 scale-90 isolate blur-sm opacity-0 invisible transition-[opacity,transform,filter] md:static md:flex md:items-center md:mt-0 md:opacity-100 md:blur-0 md:visible md:scale-100 backdrop-blur-sm;
 }
 
 .navbar.active {

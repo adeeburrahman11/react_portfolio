@@ -1,7 +1,15 @@
 import React from "react";
 import { ButtonPrimary, ButtonOutline } from "./Button";
+import { Typewriter, useTypewriter } from "react-simple-typewriter";
 
 const Hero = () => {
+  const [typeEffect] = useTypewriter({
+    words: ["Modern Websites", "Web Applications", "Android Applications"],
+    loop: {},
+    typeSpeed: 100,
+    deleteSpeed: 100,
+  });
+
   return (
     <section id="home" className="pt-36 lg:pt-36">
       <div className="container items-center lg:grid lg:grid-cols-2 lg:gap-10">
@@ -23,8 +31,11 @@ const Hero = () => {
               Available for work
             </div>
           </div>
-          <h2 className="headline-1 max-w-[15ch] sm-max-w-[20ch] lg:max-w-[15ch] mt-5 mb-8 lg:mb-10">
-            Building Scalable Modern Websites for the Future
+          <h6 className="max-w-[20ch] sm-max-w-[20ch] lg:max-w-[20ch] mt-5 mb-5">
+            Hello World! My name is
+          </h6>
+          <h2 className="headline-1 max-w-[15ch] sm-max-w-[20ch] lg:max-w-[16ch] mt-5 mb-8 lg:mb-8">
+            <p>Adeebur Rahman,</p>I Build Scalable <p>{typeEffect}</p>
           </h2>
           <div className="flex items-center gap-3">
             <ButtonPrimary label="Download CV" icon="download" />{" "}
