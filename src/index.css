@@ -10,7 +10,8 @@ body {
   @apply bg-baby-blue text-a-black;
 }
 
-.headline-1 {
+.headline-1,
+.headline-2 {
   @apply max-w-max;
   background: -webkit-linear-gradient(0deg, #0a0a0a, #8f8f91);
   -webkit-background-clip: text;
@@ -20,6 +21,10 @@ body {
 
 .headline-1 {
   @apply text-[44px] leading-tight font-semibold lg:text-[50px] lg:leading-[1.15];
+}
+
+.headline-2 {
+  @apply text-3xl lg:text-4xl lg:leading-tight font-semibold;
 }
 
 /* utilities */
