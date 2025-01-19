@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
+import { ButtonMore } from "./Button";
 
 const projects = [
   {
@@ -55,6 +56,13 @@ const Projects = () => {
               projectLink={projectLink}
             />
           ))}
+        </div>
+        <div className="flex justify-center mt-8">
+          <ButtonMore
+            href="https://github.com/adeeburrahman11"
+            label="Show More"
+            icon="arrow_outward"
+          />
         </div>
       </div>
     </section>

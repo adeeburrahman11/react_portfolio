@@ -96,7 +96,8 @@ body {
   @apply pr-3;
 }
 
-.btn-primary {
+.btn-primary,
+.btn-more {
   @apply h-11 bg-a-yellow text-a-black hover:bg-a-yellow/65 active:bg-a-yellow;
 }
 
