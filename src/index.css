@@ -104,3 +104,15 @@ body {
 .btn-outline {
   @apply h-11 bg-slate-200 hover:bg-slate-300 active:bg-slate-200;
 }
+
+.label {
+  @apply block text-a-black text-sm font-normal mb-2;
+}
+
+.text-field {
+  @apply block outline-none w-full px-3 py-3 text-sm bg-a-black/5 rounded-xl ring-1 ring-inset ring-transparent transition-shadow hover:ring-a-black/10 focus:ring-a-yellow focus:ring-2;
+}
+
+.text-field::placeholder {
+  @apply text-cool-grey;
+}

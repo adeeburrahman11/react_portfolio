@@ -63,6 +63,11 @@ const Projects = () => {
             label="Show More"
             icon="arrow_outward"
           />
+          {/* <button type="submit" className="btn btn-primary">
+            <a href="https://github.com/adeeburrahman11" target="_blank">
+              Show More
+            </a>
+          </button> */}
         </div>
       </div>
     </section>
