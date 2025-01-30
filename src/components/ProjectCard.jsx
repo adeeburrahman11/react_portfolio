@@ -1,7 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const ProjectCard = ({ imgSrc, title, tags, projectLink, classes }) => {
+const ProjectCard = ({
+  imgSrc,
+  title,
+  tags,
+  projectLink,
+  linkIcon,
+  classes,
+}) => {
   return (
     <div
       className={
@@ -26,16 +33,16 @@ const ProjectCard = ({ imgSrc, title, tags, projectLink, classes }) => {
             ))}
           </div>
         </div>
-        <div className="grid">
+        <div>
           <a href={projectLink} className="" target="_blank">
-            <div className="w-10 h-10 rounded-lg grid place-items-center bg-a-yellow text-cool-grey shrink-0 my-1">
+            <div className="w-10 h-10 rounded-lg grid place-items-center bg-a-yellow text-cool-grey shrink-0 my-2">
               <span className="material-symbols-rounded" aria-hidden="true">
-                link
+                {linkIcon}
               </span>
             </div>
           </a>
           <a href={projectLink} className="" target="_blank">
-            <div className="w-10 h-10 rounded-lg grid place-items-center bg-a-yellow text-cool-grey shrink-0 my-1">
+            <div className="w-10 h-10 rounded-lg grid place-items-center bg-a-yellow text-cool-grey shrink-0 my-2">
               <span className="material-symbols-rounded" aria-hidden="true">
                 code
               </span>
@@ -52,6 +59,7 @@ ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
   tags: PropTypes.array.isRequired,
   projectLink: PropTypes.string,
+  linkIcon: PropTypes.string.isRequired,
   classes: PropTypes.string,
 };
 
