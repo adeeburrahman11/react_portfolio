@@ -25,7 +25,7 @@ const ExperienceCard = ({ content, companyName, imgSrc, duration }) => {
   );
 };
 
-ExperienceCard.PropTypes = {
+ExperienceCard.propTypes = {
   content: PropTypes.string.isRequired,
   companyName: PropTypes.string.isRequired,
   imgSrc: PropTypes.string.isRequired,

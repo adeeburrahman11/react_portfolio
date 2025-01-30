@@ -26,13 +26,23 @@ const ProjectCard = ({ imgSrc, title, tags, projectLink, classes }) => {
             ))}
           </div>
         </div>
-        <div className="w-11 h-11 rounded-lg grid place-items-center bg-a-yellow text-cool-grey shrink-0">
-          <span className="material-symbols-rounded" aria-hidden="true">
-            arrow_outward
-          </span>
+        <div className="grid">
+          <a href={projectLink} className="" target="_blank">
+            <div className="w-10 h-10 rounded-lg grid place-items-center bg-a-yellow text-cool-grey shrink-0 my-1">
+              <span className="material-symbols-rounded" aria-hidden="true">
+                link
+              </span>
+            </div>
+          </a>
+          <a href={projectLink} className="" target="_blank">
+            <div className="w-10 h-10 rounded-lg grid place-items-center bg-a-yellow text-cool-grey shrink-0 my-1">
+              <span className="material-symbols-rounded" aria-hidden="true">
+                code
+              </span>
+            </div>
+          </a>
         </div>
       </div>
-      <a href={projectLink} className="absolute inset-0" target="_blank"></a>
     </div>
   );
 };
@@ -40,7 +50,7 @@ const ProjectCard = ({ imgSrc, title, tags, projectLink, classes }) => {
 ProjectCard.propTypes = {
   imgSrc: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  tags: PropTypes.string.isRequired,
+  tags: PropTypes.array.isRequired,
   projectLink: PropTypes.string,
   classes: PropTypes.string,
 };

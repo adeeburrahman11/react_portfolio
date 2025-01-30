@@ -4,16 +4,16 @@ import { ButtonMore } from "./Button";
 
 const projects = [
   {
-    imgSrc: "/images/project-1.jpg",
-    title: "Full stack music app",
+    imgSrc: "/images/project-notes.png",
+    title: "Full stack Notes App",
     tags: ["API", "MVC", "Development"],
-    projectLink: "https://musify-5al0.onrender.com/",
+    projectLink: "https://notes-app-adeeb.vercel.app/",
   },
   {
-    imgSrc: "/images/project-2.jpg",
-    title: "Free stock photo app",
-    tags: ["API", "SPA"],
-    projectLink: "https://pixstock-official.vercel.app/",
+    imgSrc: "/images/project-flutter.png",
+    title: "Flutter Quiz App",
+    tags: ["Flutter"],
+    projectLink: "https://github.com/adeeburrahman11/quiz_app",
   },
   {
     imgSrc: "/images/project-3.jpg",

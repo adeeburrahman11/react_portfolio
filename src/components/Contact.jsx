@@ -76,6 +76,33 @@ const socialLinks = [
 ];
 
 const Contact = () => {
+  const [result, setResult] = React.useState("");
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "5bbab5f6-1a46-4357-b28f-cb80d294b6de");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+    setTimeout(() => {
+      setResult("");
+    }, 5000);
+  };
+
   return (
     <section id="contact" className="section">
       <div className="container lg:grid lg:grid-cols-2 lg:items-stretch">
@@ -101,7 +128,8 @@ const Contact = () => {
           </div>
         </div>
         <form
-          action="https://getform.io/f/aqoojzna"
+          action=""
+          onSubmit={onSubmit}
           className="xl:pl-10 2xl:pl-20 "
           method="POST"
         >
@@ -146,6 +174,9 @@ const Contact = () => {
               placeholder="Hi!"
               required
             ></textarea>
+          </div>
+          <div className="text-cool-grey [&]:max-w-full w-full mb-4">
+            {result}
           </div>
           <button
             type="submit"
