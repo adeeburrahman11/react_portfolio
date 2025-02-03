@@ -1,5 +1,11 @@
 import React from "react";
 import ExperienceCard from "./ExperienceCard";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+// register gsap
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const experience = [
   {
@@ -21,11 +27,23 @@ const experience = [
 ];
 
 const Experience = () => {
+  useGSAP(() => {
+    gsap.to(".scrub-slide", {
+      scrollTrigger: {
+        trigger: ".scrub-slide",
+        start: "200% 80%",
+        end: "600% 80%",
+        scrub: true,
+      },
+      x: "-1000",
+    });
+  });
+
   return (
     <section id="experience" className="section overflow-hidden">
       <div className="container">
-        <h2 className="headline-2 mb-8">My Experience</h2>
-        <div className="flex items-stretch gap-3 w-fit">
+        <h2 className="headline-2 mb-8 reveal-up">My Experience</h2>
+        <div className="scrub-slide flex items-stretch gap-3 w-fit">
           {experience.map(
             ({ title, content, companyName, imgSrc, duration }, index) => (
               <ExperienceCard

@@ -11,7 +11,7 @@ const About = () => {
   return (
     <section id="about" className="section">
       <div className="container">
-        <div className="bg-a-black/5 p-7 rounded-2xl md:p-12">
+        <div className="bg-a-black/5 p-7 rounded-2xl md:p-12 reveal-up">
           <p className="text-a-black/80 mb-4 md:mb-8 md:text-lg md:max-w-[70ch]">
             Student pursuing my Bachelor's degree in Computer Science &
             Engineering from Nagpur, Maharashtra. Detail-oriented and ambitious
