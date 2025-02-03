@@ -38,7 +38,11 @@ const Hero = () => {
             <p>Adeebur Rahman,</p>I Build Scalable <p>{typeEffect}</p>
           </h2>
           <div className="flex items-center gap-3">
-            <ButtonPrimary label="Download CV" icon="download" />{" "}
+            <ButtonPrimary
+              href="https://docs.google.com/document/d/11OhBq9ixRom4O-1c2pTYaxbU8MTCfHGPU-YFo48b0zg/edit?usp=sharing"
+              label="Download CV"
+              icon="download"
+            />{" "}
             <ButtonOutline
               href="#about"
               label="Scroll down"
