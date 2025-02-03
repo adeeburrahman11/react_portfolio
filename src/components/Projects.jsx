@@ -8,42 +8,26 @@ const projects = [
     title: "Full stack Notes App",
     tags: ["API", "MVC", "Development"],
     projectLink: "https://notes-app-adeeb.vercel.app/",
+    githubLink: "https://github.com/adeeburrahman11/Notes-App",
     linkIcon: "link",
   },
   {
-    imgSrc: "/images/project-flutter.png",
+    imgSrc: "/images/project-quizApp.png",
     title: "Flutter Quiz App",
-    tags: ["Flutter"],
-    projectLink: "https://github.com/adeeburrahman11/quiz_app",
+    tags: ["Flutter", "Android"],
+    projectLink:
+      "https://drive.google.com/file/d/1SizubUiIUHUH1Qx2luGM8FzKbuZFw5jL/view?usp=sharing",
+    githubLink: "https://github.com/adeeburrahman11/quiz_app",
     linkIcon: "android",
   },
   {
-    imgSrc: "/images/project-3.jpg",
-    title: "Recipe app",
-    tags: ["Development", "API"],
-    projectLink: "",
+    imgSrc: "/images/project-diceRoll.png",
+    title: "Dice Roll App",
+    tags: ["Flutter", "Android"],
+    projectLink:
+      "https://drive.google.com/file/d/1Uir9C3-GKsImH8uHG0jVaJUM_hVTHNQE/view?usp=sharing",
+    githubLink: "https://github.com/adeeburrahman11/dice_roll",
     linkIcon: "android",
-  },
-  {
-    imgSrc: "/images/project-4.jpg",
-    title: "Real state website",
-    tags: ["Web-design", "Development"],
-    projectLink: "https://github.com/codewithsadee-org/wealthome",
-    linkIcon: "link",
-  },
-  {
-    imgSrc: "/images/project-5.jpg",
-    title: "eCommerce website",
-    tags: ["eCommerce", "Development"],
-    projectLink: "https://github.com/codewithsadee/anon-ecommerce-website",
-    linkIcon: "link",
-  },
-  {
-    imgSrc: "/images/project-6.jpg",
-    title: "vCard Personal portfolio",
-    tags: ["Web-design", "Development"],
-    projectLink: "https://github.com/codewithsadee/vcard-personal-portfolio",
-    linkIcon: "link",
   },
 ];
 
@@ -54,13 +38,17 @@ const Projects = () => {
         <h2 className="headline-2 mb-8">My project highlights</h2>
         <div className="grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))]">
           {projects.map(
-            ({ imgSrc, title, tags, projectLink, linkIcon }, index) => (
+            (
+              { imgSrc, title, tags, projectLink, githubLink, linkIcon },
+              index
+            ) => (
               <ProjectCard
                 key={index}
                 imgSrc={imgSrc}
                 title={title}
                 tags={tags}
                 projectLink={projectLink}
+                githubLink={githubLink}
                 linkIcon={linkIcon}
               />
             )

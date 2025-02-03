@@ -6,6 +6,7 @@ const ProjectCard = ({
   title,
   tags,
   projectLink,
+  githubLink,
   linkIcon,
   classes,
 }) => {
@@ -41,7 +42,7 @@ const ProjectCard = ({
               </span>
             </div>
           </a>
-          <a href={projectLink} className="" target="_blank">
+          <a href={githubLink} className="" target="_blank">
             <div className="w-10 h-10 rounded-lg grid place-items-center bg-a-yellow text-cool-grey shrink-0 my-2">
               <span className="material-symbols-rounded" aria-hidden="true">
                 code
@@ -59,6 +60,7 @@ ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
   tags: PropTypes.array.isRequired,
   projectLink: PropTypes.string,
+  githubLink: PropTypes.string,
   linkIcon: PropTypes.string.isRequired,
   classes: PropTypes.string,
 };
