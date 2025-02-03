@@ -7,19 +7,23 @@ import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
+import ReactLenis from "lenis/react";
+
 const App = () => {
   return (
     <>
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Experience />
-        <Contact />
+      <ReactLenis root>
+        <Header />
+        <main>
+          <Hero />
+          <About />
+          <Skills />
+          <Projects />
+          <Experience />
+          <Contact />
+        </main>
         <Footer />
-      </main>
+      </ReactLenis>
     </>
   );
 };
