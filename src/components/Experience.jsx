@@ -1,11 +1,13 @@
 import React from "react";
 import ExperienceCard from "./ExperienceCard";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
 
-// register gsap
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+// import styles bundle
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/free-mode";
+
+import { Pagination, FreeMode, Autoplay } from "swiper/modules";
 
 const experience = [
   {
@@ -24,38 +26,74 @@ const experience = [
     imgSrc: "/images/fledge.jpg",
     duration: "JUNE 2024 - JULY 2024",
   },
+  {
+    title: "Software Engineering Intern",
+    content:
+      "Developed a Full stack Notes App (web application) using MERN stack - MERN, JavaScript.",
+    companyName: "Fledge Consulting",
+    imgSrc: "/images/fledge.jpg",
+    duration: "JUNE 2024 - JULY 2024",
+  },
+  {
+    title: "Software Engineering Intern",
+    content:
+      "Developed a Full stack Notes App (web application) using MERN stack - MERN, JavaScript.",
+    companyName: "Fledge Consulting",
+    imgSrc: "/images/fledge.jpg",
+    duration: "JUNE 2024 - JULY 2024",
+  },
+  {
+    title: "Software Engineering Intern",
+    content:
+      "Developed a Full stack Notes App (web application) using MERN stack - MERN, JavaScript.",
+    companyName: "Fledge Consulting",
+    imgSrc: "/images/fledge.jpg",
+    duration: "JUNE 2024 - JULY 2024",
+  },
 ];
 
 const Experience = () => {
-  useGSAP(() => {
-    gsap.to(".scrub-slide", {
-      scrollTrigger: {
-        trigger: ".scrub-slide",
-        start: "200% 80%",
-        end: "600% 80%",
-        scrub: true,
-      },
-      x: "-1000",
-    });
-  });
-
   return (
-    <section id="experience" className="section overflow-hidden">
+    <section id="experience" className="section">
       <div className="container">
         <h2 className="headline-2 mb-8 reveal-up">My Experience</h2>
-        <div className="scrub-slide flex items-stretch gap-3 w-fit">
-          {experience.map(
-            ({ title, content, companyName, imgSrc, duration }, index) => (
-              <ExperienceCard
-                key={index}
-                title={title}
-                content={content}
-                companyName={companyName}
-                imgSrc={imgSrc}
-                duration={duration}
-              />
-            )
-          )}
+        <div className="flex items-stretch">
+          <Swiper
+            breakpoints={{
+              780: {
+                slidesPerView: 2,
+                spaceBetween: 15,
+              },
+            }}
+            spaceBetween={15}
+            freeMode={true}
+            pagination={{
+              // bulletClass: "swiper-bullet",
+              // bulletActiveClass: "swiper-bullet-active",
+              clickable: true,
+            }}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            modules={[FreeMode, Pagination, Autoplay]}
+            // className="max-w-[90%] lg:max-w-[80%]"
+          >
+            {experience.map(
+              ({ title, content, companyName, imgSrc, duration }, index) => (
+                <SwiperSlide key={index}>
+                  <ExperienceCard
+                    key={index}
+                    title={title}
+                    content={content}
+                    companyName={companyName}
+                    imgSrc={imgSrc}
+                    duration={duration}
+                  />
+                </SwiperSlide>
+              )
+            )}
+          </Swiper>
         </div>
       </div>
     </section>

@@ -121,3 +121,16 @@ body {
 .text-field::placeholder {
   @apply text-cool-grey;
 }
+
+/* Swiper */
+/* .swiper-bullet {
+  @apply bg-cool-grey;
+} */
+
+/* .swiper-bullet-active {
+  @apply bg-a-yellow !important;
+} */
+
+.swiper-pagination-bullet-active {
+  @apply bg-a-yellow !important;
+}

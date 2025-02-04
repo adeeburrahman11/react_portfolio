@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const ExperienceCard = ({ title, content, companyName, imgSrc, duration }) => {
   return (
-    <div className=" bg-a-black/5 p-5 rounded-xl min-w-[320px] flex flex-col lg:min-w-[420px]">
+    <div className=" bg-a-black/5 p-5 mt-4 mb-12 rounded-xl min-w-[320px] flex flex-col lg:min-w-[380px]">
       <p className="text-a-black font-medium">{title}</p>
       <p className="text-cool-grey mb-8">{content}</p>
       <div className="flex items-center gap-2 mt-auto">
@@ -11,8 +11,8 @@ const ExperienceCard = ({ title, content, companyName, imgSrc, duration }) => {
           <img
             src={imgSrc}
             alt={companyName}
-            width={56}
-            height={56}
+            width={52}
+            height={52}
             loading="lazy"
             className="img-cover"
           />
