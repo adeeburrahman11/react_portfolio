@@ -26,30 +26,6 @@ const experience = [
     imgSrc: "/images/fledge.jpg",
     duration: "JUNE 2024 - JULY 2024",
   },
-  {
-    title: "Software Engineering Intern",
-    content:
-      "Developed a Full stack Notes App (web application) using MERN stack - MERN, JavaScript.",
-    companyName: "Fledge Consulting",
-    imgSrc: "/images/fledge.jpg",
-    duration: "JUNE 2024 - JULY 2024",
-  },
-  {
-    title: "Software Engineering Intern",
-    content:
-      "Developed a Full stack Notes App (web application) using MERN stack - MERN, JavaScript.",
-    companyName: "Fledge Consulting",
-    imgSrc: "/images/fledge.jpg",
-    duration: "JUNE 2024 - JULY 2024",
-  },
-  {
-    title: "Software Engineering Intern",
-    content:
-      "Developed a Full stack Notes App (web application) using MERN stack - MERN, JavaScript.",
-    companyName: "Fledge Consulting",
-    imgSrc: "/images/fledge.jpg",
-    duration: "JUNE 2024 - JULY 2024",
-  },
 ];
 
 const Experience = () => {
