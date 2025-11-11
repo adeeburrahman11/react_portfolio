@@ -101,7 +101,7 @@ const Footer = () => {
             <img src="/images/logo.png" width={50} height={50} alt="Logo" />
           </a>
           <p className="text-cool-grey text-sm reveal-up">
-            &copy; 2024
+            &copy; 2025
             <span className="text-a-black ml-1 reveal-up">Adeebur Rahman</span>
           </p>
         </div>
