@@ -16,7 +16,7 @@ const experience = [
       "Assisting in developing responsive and visually appealing web application using MERN stack.",
     companyName: "Clustor Computing",
     imgSrc: "/images/clustor_computing.jpg",
-    duration: "DECEMBER 2024 - CURRENT",
+    duration: "DECEMBER 2024 - MARCH 2025",
   },
   {
     title: "Software Engineering Intern",
@@ -67,7 +67,7 @@ const Experience = () => {
                     duration={duration}
                   />
                 </SwiperSlide>
-              )
+              ),
             )}
           </Swiper>
         </div>
